@@ -1,3 +1,8 @@
+body{
+  background-color: grey;
+}
+
+
 .page {
     display: flex;
     flex-direction: column;
@@ -5,6 +10,7 @@
     align-items: center;
     width: 100%;
     max-width:800px;
+    margin-left: 300px;
   }
   
   
@@ -75,7 +81,3 @@
     background: #f23;
   }
   
-
-  #root {
-    background-color: grey;
-  }

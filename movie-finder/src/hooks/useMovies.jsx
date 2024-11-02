@@ -4,8 +4,10 @@ import { searchMovies } from "../services/movies";
 export function useMovies({ search, sort }) {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [, setError] = useState(null);
+  const [error, setError] = useState(null);
   const previousSearch = useRef(search);
+
+  // memoize function
   const getMovies = useCallback(async ({ search }) => {
     if (search === previousSearch.current) return;
 
@@ -22,6 +24,7 @@ export function useMovies({ search, sort }) {
     }
   }, []);
 
+  // memoize value 
   const sortedMovies = useMemo(() => {
     if (!movies) return;
     return sort
