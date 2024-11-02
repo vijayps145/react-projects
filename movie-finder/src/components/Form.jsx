@@ -9,8 +9,8 @@ export function Form({ handleSubmit, error, handleChange, handleSort, search, so
     <form className="form" onSubmit={handleSubmit}>
       <input 
         style={{
-          border: "1px solid transparent",
-          borderColor: error ? "red" : "black",
+          border: "1px solid blue",
+          borderColor: error ? "red" : "transparent",
         }}
         onChange={handleChange}
         value={search}
