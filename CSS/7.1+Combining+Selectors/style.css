@@ -1,0 +1,27 @@
+/* Write your code here: */
+
+
+h1,h2 {
+    color: blueviolet;
+}
+
+/* > is applicable only to direct child and not 2nd or 3rd level child
+.done is direct first level child of .box
+*/
+.box > .done{
+    color: firebrick;
+}
+
+/* list is parent selector, li is child selector, child here can be at any level */
+.list li{
+    color: blue;
+}
+
+/*This is chaining, li is the element and then we add class name without space*/
+li.done{
+    color: seagreen;
+}
+
+ul p.done{
+    font-size: 0.5rem;
+}
